@@ -2,7 +2,7 @@
 #include "MatAB.h"
 
 using namespace std;
-#define N 3
+
 int main()
 {
 	int A[N][N], B[N][N];
@@ -15,6 +15,6 @@ int main()
 	for(int i=0;i<N;i++)
 		for(int j=0;j<N;j++)
 			cin>>B[i][j];
-	proxy->multiplication();
+	proxy->multiplication(A,B);
 	return 0;
 }
