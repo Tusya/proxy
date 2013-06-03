@@ -13,7 +13,10 @@ public:
 class Matrix:public MatAB
 {
 public:
-	virtual int multiplication();
+	virtual int multiplication()
+	{
+
+	}
 };
 //Заместитель - Proxy
 class MatrixProxy:public MatAB
