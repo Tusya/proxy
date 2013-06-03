@@ -9,12 +9,14 @@ class MatAB
 {
 public:
 	virtual int multiplication(int A[N][N], int B[N][N]) = 0;
+	virtual int determinant(int A[N][N], int B[N][N]) = 0;
 };
 //Реальный субъект
 class Matrix:public MatAB
 {
 public:
 	virtual int multiplication(int A[N][N], int B[N][N]);
+	virtual int determinant(int A[N][N], int B[N][N]);
 };
 //Заместитель - Proxy
 class MatrixProxy:public MatAB
@@ -26,6 +28,11 @@ public:
 	{
 		return matriza->multiplication(A,B);
 	}
+	virtual int determinant(int A[N][N], int B[N][N])
+	{
+		return matriza->determinant(A,B);
+	}
+
 private:
 	MatAB *matriza;
 };
